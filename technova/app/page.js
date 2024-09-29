@@ -124,7 +124,7 @@ export default function Home() {
               <Paper elevation={3} className={styles.feature}>
                 <img src="/resumeparser.jpg" alt="Resume Parser Feature" style={{ width: '100%', height: 'auto' }} />
                 <Typography variant="h3" align="center" gutterBottom>
-                  Resume Parser
+                  ATS Compatibility Checking
                 </Typography>
                 <Typography align="center" paragraph>
                   Get AI-powered resume analysis to highlight your skills and achievements.
