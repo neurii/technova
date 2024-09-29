@@ -145,7 +145,7 @@ export default function Home() {
                 <Typography align="center" paragraph>
                   Get AI-powered resume analysis to highlight your skills and achievements.
                 </Typography>
-                <Button variant="contained" className={styles.cta} fullWidth>
+                <Button variant="contained" className={styles.cta} fullWidth >
                   Learn More
                 </Button>
               </Paper>
