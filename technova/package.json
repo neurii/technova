@@ -11,18 +11,31 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@headlessui/react": "^2.1.8",
+<<<<<<< HEAD
+=======
     "@mui/icons-material": "^6.1.1",
     "@mui/material": "^6.1.1",
+    "@propelauth/nextjs": "^0.1.10",
+    "@propelauth/react": "^2.0.22",
+    "next": "^14.2.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-syntax-highlighter": "^15.5.0",
+>>>>>>> 79c9af30ad8022957dfe863a5ce8b5987d463d99
+    "@headlessui/react": "^2.1.8",
     "@pinecone-database/pinecone": "^3.0.3",
     "@propelauth/nextjs": "^0.1.10",
     "@propelauth/react": "^2.0.22",
     "axios": "^1.7.7",
+<<<<<<< HEAD
     "next": "^14.2.13",
     "openai": "^4.65.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-syntax-highlighter": "^15.5.0",
+=======
+    "openai": "^4.65.0",
+>>>>>>> 79c9af30ad8022957dfe863a5ce8b5987d463d99
     "three": "^0.169.0",
     "vanta": "^0.5.24"
   },
