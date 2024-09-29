@@ -7,12 +7,19 @@ from dotenv import load_dotenv
 import json
 import requests
 
-#load_dotenv()
+# try:
+#     google_api_key = st.secrets["GOOGLE_API_KEY"]  # Check if deployed on Streamlit Cloud
+# except KeyError:
+#     # If running locally, fall back to .env file
+#     google_api_key = os.getenv("GOOGLE_API_KEY")  # Use .env file locally
 
-#genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# if google_api_key is None:
+#     st.error("API key not found! Please check your configuration.")
+#     st.stop()
 
-google_api_key = st.secrets["GOOGLE_API_KEY"]
-genai.configure(api_key=google_api_key)
+load_dotenv()
+
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 generation_config = {
     "temperature": 0,
