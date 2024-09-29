@@ -15,6 +15,7 @@
     "@mui/icons-material": "^6.1.1",
     "@mui/material": "^6.1.1",
     "@pinecone-database/pinecone": "^3.0.3",
+    "@propelauth/nextjs": "^0.1.10",
     "axios": "^1.7.7",
     "next": "14.2.13",
     "openai": "^4.65.0",

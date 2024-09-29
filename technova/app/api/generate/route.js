@@ -13,15 +13,18 @@ export async function POST(req) {
   {
     "technical": [
       {"question": "Technical question 1", "answer": "Answer 1"},
-      {"question": "Technical question 2", "answer": "Answer 2"}
+      {"question": "Technical question 2", "answer": "Answer 2"},
+      {"question": "Technical question 3", "answer": "Answer 3"}
     ],
     "behavioral": [
       {"question": "Behavioral question 1", "answer": "Answer 1"},
-      {"question": "Behavioral question 2", "answer": "Answer 2"}
+      {"question": "Behavioral question 2", "answer": "Answer 2"},
+      {"question": "Behavioral question 3", "answer": "Answer 3"}
     ],
     "situational": [
       {"question": "Situational question 1", "answer": "Answer 1"},
-      {"question": "Situational question 2", "answer": "Answer 2"}
+      {"question": "Situational question 2", "answer": "Answer 2"},
+      {"question": "Situational question 3", "answer": "Answer 3"}
     ]
   }
   `;
