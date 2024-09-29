@@ -166,8 +166,8 @@ div.features{
   justify-content: center; /* Space out the feature cards */
   align-items: stretch; /* Align items at the top */
   flex-wrap: wrap; /* Allow wrapping if there are more items than can fit in one row */
-  gap: 20px; /* Gap between feature cards */
-  padding: 0 100px; /* Add horizontal padding */
+  gap: 1000px; /* Gap between feature cards */
+  padding: 0 50px; /* Add horizontal padding */
 }
 
 .feature {
@@ -177,13 +177,25 @@ div.features{
   min-height: 450px; /* Adjust the minimum height for better spacing */
   background-color: #fff;
   border: 1px solid #DFA4A4;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
-  width: 300px; /* Set a width for each feature card */
+  max-width: 500px; /* Set a width for each feature card */
   text-align: center; /* Align text to the left */
   border-radius: 8px;
   box-shadow: none;
-  flex: 0 1 calc(33.333% - 40px); /* 3 feature cards per row, with room for gap */
+  flex: 0 1 calc(50% - 20px); /* 3 feature cards per row, with room for gap */
+}
+
+.spacer {
+  height: 20px; /* Adjust height as needed for extra space */
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .feature {
+    min-height: 350px; /* Adjust the min-height for smaller screens */
+    flex: 0 1 100%; /* Stack items in a single column for mobile */
+  }
 }
 
 .feature img {
