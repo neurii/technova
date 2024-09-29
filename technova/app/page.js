@@ -119,28 +119,12 @@ export default function Home() {
         <br />
         <section id="features">
           <Grid container spacing={3} justifyContent="center" className={styles.featuresGrid}>
-            {/* Job Board Feature */}
-            <Grid item xs={12} sm={6} md={4}>
-              <Paper elevation={3} className={styles.feature}>
-                <img src="/searchicon.png" alt="Job Board Feature" style={{ width: '100%', height: 'auto' }} />
-                <Typography variant="h3" align="center" gutterBottom>
-                  Job Board
-                </Typography>
-                <Typography align="center" paragraph>
-                  Find the perfect job opportunities tailored for women in STEM.
-                </Typography>
-                <Button variant="contained" className={styles.cta} fullWidth>
-                  Learn More
-                </Button>
-              </Paper>
-            </Grid>
-
             {/* Resume Parser Feature */}
             <Grid item xs={12} sm={6} md={4}>
               <Paper elevation={3} className={styles.feature}>
                 <img src="/resumeparser.jpg" alt="Resume Parser Feature" style={{ width: '100%', height: 'auto' }} />
                 <Typography variant="h3" align="center" gutterBottom>
-                  Resume Parser
+                  ATS Compatibility Checking
                 </Typography>
                 <Typography align="center" paragraph>
                   Get AI-powered resume analysis to highlight your skills and achievements.
@@ -161,9 +145,11 @@ export default function Home() {
                 <Typography align="center" paragraph>
                   Prepare for interviews with personalized AI-driven questions and feedback.
                 </Typography>
-                <Button variant="contained" className={styles.cta} fullWidth>
-                  Learn More
-                </Button>
+                <a href="/chatbot" style={{ textDecoration: 'none' }}>
+                  <Button variant="contained" className={styles.cta} fullWidth>
+                    Learn More
+                  </Button>
+                </a>
               </Paper>
             </Grid>
           </Grid>
