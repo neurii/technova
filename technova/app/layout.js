@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       
         <AuthProvider authUrl={process.env.NEXT_PUBLIC_AUTH_URL}>
-        <body>{children}      </body>
+        <body>{children}</body>
 
         </AuthProvider>
     </html>
