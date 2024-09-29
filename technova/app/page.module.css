@@ -1,6 +1,10 @@
 /* Importing the Libre Baskerville font */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
+div.features{
+  font-size:xx-large;
+}
+
 .page {
   font-family: 'Libre Baskerville', serif; /* Set the font */
   color: #41281D; /* Main text color */
@@ -146,21 +150,21 @@
 .features-section {
   background-color: #F9E7E3; /* Background color similar to the rest of the page */
   text-align: center;
-  padding: 50px 0;
-
+  padding: 4rem 0;
 }
 
-.features-section h2 {
+.features-section h1 {
   font-family: 'Libre Baskerville', serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #41281D; /* Main text color */
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .features-grid {
   display: flex;
   justify-content: center; /* Space out the feature cards */
-  align-items: flex-start; /* Align items at the top */
+  align-items: stretch; /* Align items at the top */
   flex-wrap: wrap; /* Allow wrapping if there are more items than can fit in one row */
   gap: 20px; /* Gap between feature cards */
   padding: 0 100px; /* Add horizontal padding */
@@ -168,13 +172,16 @@
 
 .feature {
   display: flex;
-  flex-direction:row;
+  flex-direction:column;
+  justify-content: space-between;
+  min-height: 450px; /* Adjust the minimum height for better spacing */
   background-color: #fff;
   border: 1px solid #DFA4A4;
   padding: 20px;
+  box-sizing: border-box;
   width: 300px; /* Set a width for each feature card */
-  text-align: left; /* Align text to the left */
-  border-radius: 10px;
+  text-align: center; /* Align text to the left */
+  border-radius: 8px;
   box-shadow: none;
   flex: 0 1 calc(33.333% - 40px); /* 3 feature cards per row, with room for gap */
 }
@@ -182,19 +189,40 @@
 .feature img {
   width: 100%;
   height: auto;
-  margin-bottom: 15px; /* Space between image and heading */
+  margin-bottom: 20px; /* Space between image and heading */
 }
 
-.feature h2 {
+.feature h3 {
   font-size: 1.5rem;
   color: #41281D; /* Dark brown text */
   margin-bottom: 10px;
 }
 
 .feature p {
+  flex-grow: 1; /* Make the paragraph take available space */
   font-size: 1rem;
   color: #41281D; /* Dark brown text */
   margin-bottom: 20px;
+}
+
+.feature button {
+  background-color: #DFA4A4; /* Use the contrasting color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.feature button:hover {
+  background-color: #bf8c8c; /* Adjust hover color if needed */
+}
+
+/* Add media query for responsive design */
+@media (max-width: 768px) {
+  .feature {
+    min-height: 350px; /* Adjust the min-height for smaller screens */
+  }
 }
 
 .cta {
@@ -229,18 +257,62 @@
   text-align: center; /* Center the heading */
 }
 
-.socials {
-  text-align: right; /* Align text to the right */
-}
-
-.socials h3 {
-  margin-bottom: 10px; /* Space below the heading */
+.footerContent {
+  display: flex;
+  justify-content: space-between; /* Aligns form and right box side by side */
+  align-items: flex-start; /* Ensures both form and right box align at the top */
 }
 
 .footerContainer form {
   display: flex;
   flex-direction: column;
   max-width: 400px; /* Set a max width for the form */
+}
+
+.rightBox {
+  background-color: #41281D; /* Brown color to match the footer */
+  border: none; /* White border around the box */
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 20px;
+  color: #ffffff;
+  min-width: 600px; /* Width of the rectangular box */
+  min-height: 500px; /* Height of the rectangular box */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: flex-start; /* Align items at the top */
+  align-items: center; /* Center elements horizontally */
+  text-align: center; /* Center text inside the box */
+}
+
+.rightBox h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  white-space: nowrap; /* Prevent text from breaking into a new line */
+  text-align: center; /* Center the heading text */
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: space-around; /* Space icons evenly */
+  width: 100%;
+}
+
+.socialIcons img {
+  width: 75px; /* Set the icon size */
+  height: 75px; /* Maintain aspect ratio */
+  padding: 10px;
+}
+
+.socialIcons img[alt="Instagram"] {
+  width: 80px; /* Set the icon size */
+  height: 80px; /* Maintain aspect ratio */
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.socialIcons img[alt="Facebook"],
+.socialIcons img[alt="LinkedIn"] {
+  margin-top: 20px; /* Adjust this value to move them lower */
 }
 
 .footerContainer form div {
@@ -268,7 +340,6 @@
   resize: vertical; /* Allow vertical resizing only */
 }
 
-
 .footerContainer button {
   background-color: #DFA4A4; /* Button color */
   color: #41281D; /* Text color */
@@ -288,4 +359,24 @@
 
 .footerContainer button:hover {
   background-color: #f2bcbc; /* Keep same hover color or change if needed */
+}
+
+.footerLists {
+  display: flex; /* Align lists side by side */
+  justify-content: center; /* Center the lists */
+  margin-top: 20px; /* Space between icons and lists */
+}
+
+.footerList {
+  list-style-type: none; /* Use bullet points */
+  padding: 0 20px; /* Space on the left side for the bullets */
+  margin: 0; /* Reset margin */
+}
+
+.footerList li {
+  color: #ffffff; /* Text color for the list items */
+  font-size: 1.2rem; /* Font size for the list items */
+  margin-bottom: 15px; /* Space between bullet points */
+  line-height: 1.8; /* Adjust line height for more vertical space */
+  text-align: left; /* Left-align the text */
 }

@@ -12,7 +12,6 @@ import Radio from '@mui/material/Radio';
 import Paper from '@mui/material/Paper';
 import { Typography, Button,  } from "@mui/material";
 
-
 const scrollToSection = (id) => {
   const section = document.getElementById(id);
   if (section) {
@@ -84,7 +83,7 @@ export default function Home() {
             Committed to Excellence
           </p>
           <a href="#join" className={styles.cta}>
-            Get Started
+            Join Us
           </a>
           <div className={styles.spacer}></div> {/* Add this line for extra space */}
         </section>
@@ -115,35 +114,15 @@ export default function Home() {
         </section>
         
         {/* Features */}
-        <section id="features" className={styles.featuresSection}>
-          <h2>Features</h2>
-          {/* <div className={styles.featuresGrid}>
-            <div className={styles.feature}>
-              <img src="/search.gif" alt="Job Board Feature" />
-              <h3>Job Board</h3>
-              <p>Find the perfect job opportunities tailored for women in STEM.</p>
-              <button className={styles.cta}>Learn More</button>
-            </div>
-
-            <div className={styles.feature}>
-              <img src="/resume.gif" alt="Resume Parser Feature" />
-              <h3>Resume Parser</h3>
-              <p>Get AI-powered resume analysis to highlight your skills and achievements.</p>
-              <button className={styles.cta}>Learn More</button>
-            </div>
-
-            <div className={styles.feature}>
-              <img src="/chat.gif" alt="AI Interview Prep Feature" />  
-              <h3>AI Interview Prep</h3>
-              <p>Prepare for interviews with personalized AI-driven questions and feedback.</p>
-              <button className={styles.cta}>Learn More</button>
-            </div>
-          </div> */}
+        <h1>Features</h1>
+        <br />
+        <br />
+        <section id="features">
           <Grid container spacing={3} justifyContent="center" className={styles.featuresGrid}>
             {/* Job Board Feature */}
             <Grid item xs={12} sm={6} md={4}>
               <Paper elevation={3} className={styles.feature}>
-                <img src="/search.gif" alt="Job Board Feature" style={{ width: '100%', height: 'auto' }} />
+                <img src="/searchicon.png" alt="Job Board Feature" style={{ width: '100%', height: 'auto' }} />
                 <Typography variant="h3" align="center" gutterBottom>
                   Job Board
                 </Typography>
@@ -159,7 +138,7 @@ export default function Home() {
             {/* Resume Parser Feature */}
             <Grid item xs={12} sm={6} md={4}>
               <Paper elevation={3} className={styles.feature}>
-                <img src="/resume.gif" alt="Resume Parser Feature" style={{ width: '100%', height: 'auto' }} />
+                <img src="/resumeparser.jpg" alt="Resume Parser Feature" style={{ width: '100%', height: 'auto' }} />
                 <Typography variant="h3" align="center" gutterBottom>
                   Resume Parser
                 </Typography>
@@ -175,7 +154,7 @@ export default function Home() {
             {/* AI Interview Prep Feature */}
             <Grid item xs={12} sm={6} md={4}>
               <Paper elevation={3} className={styles.feature}>
-                <img src="/chat.gif" alt="AI Interview Prep Feature" style={{ width: '100%', height: 'auto' }} />
+                <img src="/chatbubbles.jpg" alt="AI Interview Prep Feature" style={{ width: '100%', height: 'auto' }} />
                 <Typography variant="h3" align="center" gutterBottom>
                   AI Interview Prep
                 </Typography>
@@ -191,12 +170,17 @@ export default function Home() {
         </section>
         
       </main>
+      <br />
+      <br />
+      <br />
 
       <footer className={styles.footerContainer} id="contactus">
-        <h1>Connect With Us</h1>
-        <p>Your feedback is important to us!<br/>
+      <div className={styles.footerContent}>
+        <div>
+          <h1>Connect With Us</h1>
+          <p>Your feedback is important to us!<br/>
           Please share your thoughts or inquiries below:
-        </p>
+          </p>
           <form>
             <div>
               <label htmlFor="name">Name:</label>
@@ -212,15 +196,31 @@ export default function Home() {
             </div>
             <button type="submit">Send Message</button>
           </form>
-          <p>© 2024 EmpowHER. All rights reserved.</p>
-          <div className={styles.socials}>
-            <h3>Our Socials</h3>
-            {/* Add your social media links/icons here */}
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
-        </footer>
+        </div>
+        <div className={styles.rightBox}>
+          <h2>Follow Us</h2>
+          <div className={styles.socialIcons}>
+            <img src="/insta.png" alt="Instagram" />
+            <img src="/face.png" alt="Facebook" />
+            <img src="/linkedinn.png" alt="LinkedIn" />
+          </div>
+          <div className={styles.footerLists}>
+            <ul className={styles.footerList}>
+              <li>Resources</li>
+              <li>Newsletter</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+            </ul>
+            <ul className={styles.footerList}>
+              <li>Podcasts</li>
+              <li>Chapters</li>
+              <li>Mentor Program</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>© 2024 EmpowHER. All rights reserved.</p>
+    </footer>
 
     </div>
   );
