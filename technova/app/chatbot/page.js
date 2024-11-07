@@ -40,10 +40,19 @@ export default function InterviewAssistant() {
   };
 
   return (
-    <Box p={5} sx={{ backgroundColor: 'white', color: 'black' }}>
-      <Typography variant="h4" gutterBottom>
+    <Box p={5} sx={{ backgroundColor: '#f9e7e3', color: '#4b2e2e', fontFamily: '"Times New Roman", Times, serif' }}>
+      <Typography 
+        variant="h2"
+        gutterBottom 
+        sx={{ 
+          textAlign: 'center', 
+          fontFamily: '"Times New Roman", Times, serif', 
+          fontWeight: 'bold',
+          color: '#41281D'
+        }}>
         Mock Interview Assistant
       </Typography>
+
       <Stack spacing={3}>
         <TextField
           label="Paste Job Description"
@@ -53,29 +62,75 @@ export default function InterviewAssistant() {
           value={jobDescription}
           onChange={(e) => setJobDescription(e.target.value)}
           fullWidth
+          sx={{
+            fontFamily: '"Times New Roman", Times, serif',
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: '#e65e7e'
+              },
+              '&:hover fieldset': {
+                borderColor: '#cf222e',
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: '#cf222e',
+              },
+            },
+            '& .MuiInputLabel-root': {
+              color: 'gray',
+              fontFamily: '"Times New Roman", Times, serif',
+            },
+            '& .MuiInputLabel-root.Mui-focused': {
+              color: '#cf222e',
+            }
+          }}
         />
         <Button
           variant="contained"
           onClick={generateQuestions}
           disabled={loading || !jobDescription}
+          sx={{
+            backgroundColor: '#e0a6a4',
+            color: '#f7f7f7',
+            fontFamily: '"Times New Roman", Times, serif',
+            '&:hover': {
+              backgroundColor: '#d88c91',
+            }
+          }}
         >
           {loading ? 'Generating Questions...' : 'Generate Interview Questions'}
         </Button>
       </Stack>
 
       {['technical', 'behavioral', 'situational'].map((category) => (
-        <Box mt={5} key={category}>
-          <Typography variant="h5" gutterBottom>
+        <Box 
+          mt={5} 
+          key={category} 
+          sx={{ 
+            border: '1px solid #e65e7e',
+            borderRadius: '10px', 
+            padding: '20px', 
+            backgroundColor: '#f7f7f7',
+            fontFamily: '"Times New Roman", Times, serif'
+          }}>
+          <Typography variant="h5" gutterBottom sx={{ color: '#4b2e2e', fontFamily: '"Times New Roman", Times, serif' }}>
             {category.charAt(0).toUpperCase() + category.slice(1)} Questions
           </Typography>
-          {questions[category].length === 0 && <Typography>No questions generated yet.</Typography>}
+          {questions[category].length === 0 && (
+            <Typography sx={{ fontFamily: '"Times New Roman", Times, serif', color: '#4b2e2e' }}>
+              No questions generated yet.
+            </Typography>
+          )}
           {questions[category].map((question, index) => (
-            <Accordion key={index}>
-              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography>{question.question}</Typography>
+            <Accordion key={index} sx={{ fontFamily: '"Times New Roman", Times, serif' }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ fontFamily: '"Times New Roman", Times, serif' }}>
+                <Typography sx={{ fontFamily: '"Times New Roman", Times, serif', color: '#4b2e2e' }}>
+                  {question.question}
+                </Typography>
               </AccordionSummary>
-              <AccordionDetails>
-                <Typography>{question.answer}</Typography>
+              <AccordionDetails sx={{ fontFamily: '"Times New Roman", Times, serif', color: '#4b2e2e' }}>
+                <Typography sx={{ fontFamily: '"Times New Roman", Times, serif', color: '#4b2e2e' }}>
+                  {question.answer}
+                </Typography>
               </AccordionDetails>
             </Accordion>
           ))}
